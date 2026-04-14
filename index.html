@@ -1,169 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarships</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>دليل المنح الدولية للبكالوريوس</title>
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* خط إنتر الافتراضي مع دعم الخط العربي المناسب */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Cairo:wght@200..1000&display=swap');
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: #f7f9fc; /* خلفية فاتحة ومريحة */
+        }
+        /* تصميم زر التقديم (Call to action) */
+        .apply-btn {
+            background-color: #2563eb;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .apply-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        /* تصميم قسم المنحة */
+        .scholarship-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .scholarship-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+        /* شريط التبويب النشط */
+        .tab-active {
+            border-bottom: 3px solid #06b6d4; /* لون سماوي جذاب */
+            color: #06b6d4;
+            font-weight: 600;
+        }
+        /* أيقونة الدولة (رمز تعبيري كبير) */
+        .flag-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Scholarship Listings</h1>
-    </header>
-    <main>
-        <h2>تصفية المنح (21 منحة)</h2>
-        <section id="scholarships">
-            <article>
-                <h3>Scholarship Title 1</h3>
-                <p>Flag: <img src="flag1.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-05-01</p>
-                <p>Specializations: Computer Science</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 2</h3>
-                <p>Flag: <img src="flag2.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-05-15</p>
-                <p>Specializations: Engineering</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 3</h3>
-                <p>Flag: <img src="flag3.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-06-01</p>
-                <p>Specializations: Arts</p>
-                <p>Language: Arabic</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 4</h3>
-                <p>Flag: <img src="flag4.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-06-10</p>
-                <p>Specializations: Business</p>
-                <p>Language: French</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 5</h3>
-                <p>Flag: <img src="flag5.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-07-01</p>
-                <p>Specializations: Medicine</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 6</h3>
-                <p>Flag: <img src="flag6.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-07-15</p>
-                <p>Specializations: Law</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 7</h3>
-                <p>Flag: <img src="flag7.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-08-01</p>
-                <p>Specializations: Education</p>
-                <p>Language: Spanish</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 8</h3>
-                <p>Flag: <img src="flag8.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-08-15</p>
-                <p>Specializations: Social Work</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 9</h3>
-                <p>Flag: <img src="flag9.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-09-01</p>
-                <p>Specializations: Environmental Science</p>
-                <p>Language: Arabic</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 10</h3>
-                <p>Flag: <img src="flag10.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-09-15</p>
-                <p>Specializations: Physics</p>
-                <p>Language: French</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 11</h3>
-                <p>Flag: <img src="flag11.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-10-01</p>
-                <p>Specializations: Mathematics</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 12</h3>
-                <p>Flag: <img src="flag12.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-10-15</p>
-                <p>Specializations: Chemistry</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 13</h3>
-                <p>Flag: <img src="flag13.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-11-01</p>
-                <p>Specializations: Literature</p>
-                <p>Language: Spanish</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 14</h3>
-                <p>Flag: <img src="flag14.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-11-15</p>
-                <p>Specializations: History</p>
-                <p>Language: Arabic</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 15</h3>
-                <p>Flag: <img src="flag15.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-12-01</p>
-                <p>Specializations: Sociology</p>
-                <p>Language: French</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 16</h3>
-                <p>Flag: <img src="flag16.png" alt="Country Flag"></p>
-                <p>Deadline: 2026-12-15</p>
-                <p>Specializations: Political Science</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 17</h3>
-                <p>Flag: <img src="flag17.png" alt="Country Flag"></p>
-                <p>Deadline: 2027-01-01</p>
-                <p>Specializations: Geography</p>
-                <p>Language: Arabic</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 18</h3>
-                <p>Flag: <img src="flag18.png" alt="Country Flag"></p>
-                <p>Deadline: 2027-01-15</p>
-                <p>Specializations: Philosophy</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 19</h3>
-                <p>Flag: <img src="flag19.png" alt="Country Flag"></p>
-                <p>Deadline: 2027-02-01</p>
-                <p>Specializations: Ethics</p>
-                <p>Language: Spanish</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 20</h3>
-                <p>Flag: <img src="flag20.png" alt="Country Flag"></p>
-                <p>Deadline: 2027-02-15</p>
-                <p>Specializations: Theology</p>
-                <p>Language: English</p>
-            </article>
-            <article>
-                <h3>Scholarship Title 21</h3>
-                <p>Flag: <img src="flag21.png" alt="Country Flag"></p>
-                <p>Deadline: 2027-03-01</p>
-                <p>Specializations: Astronomy</p>
-                <p>Language: Arabic</p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Scholarships</p>
-    </footer>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- العنوان الرئيسي -->
+        <header class="text-center mb-8 md:mb-12 p-4 bg-white rounded-xl shadow-lg">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-2">
+                دليل <span class="text-cyan-600">المنح الدولية</span> الممولة بالكامل
+            </h1>
+            <p class="text-base md:text-lg text-gray-600">
+                منح دراسية للبكالوريوس
+            </p>
+        </header>
+
+        <!-- أدوات التصفية والبحث -->
+        <div class="mb-8 p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">تصفية المنح (21 منحة)</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" id="searchInput" placeholder="ابحث بالاسم أو البلد أو التخصص..." class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500 text-right" oninput="filterScholarships()">
+
+                <select id="countryFilter" class="w-full md:w-56 p-3 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500" onchange="filterScholarships()">
+                    <option value="">جميع الدول</option>
+                </select>
+
+                <select id="sectionFilter" class="w-full md:w-56 p-3 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500" onchange="filterScholarships()">
+                    <option value="">جميع الأقسام</option>
+                    <option value="حكومية">المنح الحكومية الدولية</option>
+                    <option value="جامعية مرموقة">منح الجامعات العالمية المرموقة</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- عرض المنح -->
+        <div id="scholarshipsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- سيتم إضافة بطاقات المنح هنا بواسطة JavaScript -->
+        </div>
+
+        <!-- رسالة حالة التصفية -->
+        <div id="noResults" class="hidden text-center p-8 bg-yellow-100 border border-yellow-300 rounded-xl mt-8">
+            <p class="text-xl font-medium text-yellow-800">
+                عذراً، لا توجد منح تطابق معايير البحث أو التصفية الحالية.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        // تعريف بيانات المنح باللغة العربية
+        const scholarshipsData = [
+            // القسم الأول: منح حكومية دولية
+            { section: "حكومية", country: "تركيا", name: "منحة الحكومة التركية (Türkiye Burslari)", funding: "ممولة بالكامل (رسوم دراسية + إقامة + معيشة + تذاكر طيران)", specializations: "الاقتصاد، العلوم السياسية، العلاقات الدولية، وغيرها", language: "التركية أو الإنجليزية", deadline: "يناير – فبراير", link: "https://www.turkiyeburslari.gov.tr", flag: "🇹🇷" },
+            { section: "حكومية", country: "اليابان", name: "منحة الحكومة اليابانية (MEXT)", funding: "تغطية كاملة للرسوم والمعيشة وتذاكر السفر", specializations: "تشمل الاقتصاد والعلوم الاجتماعية", language: "اليابانية أو الإنجليزية (بعد سنة تحضيرية)", deadline: "مايو – يونيو", link: "https://www.studyinjapan.go.jp", flag: "🇯🇵" },
+            { section: "حكومية", country: "كوريا الجنوبية", name: "منحة الحكومة الكورية (GKS)", funding: "رسوم دراسية + سكن + راتب شهري + تذاكر سفر", specializations: "جميع التخصصات بما في ذلك الاقتصاد والسياسة", language: "الإنجليزية أو الكورية", deadline: "فبراير – مارس", link: "https://studyinkorea.go.kr", flag: "🇰🇷" },
+            { section: "حكومية", country: "المجر", name: "منحة الحكومة الهنغارية (Stipendium Hungaricum)", funding: "كامل (دراسة + إقامة + تأمين + دعم معيشة)", specializations: "الاقتصاد، العلوم الاجتماعية", language: "الإنجليزية", deadline: "نوفمبر – يناير", link: "https://stipendiumhungaricum.hu", flag: "🇭🇺" },
+            { section: "حكومية", country: "الصين", name: "منحة الحكومة الصينية (CSC)", funding: "شامل (رسوم + سكن + تأمين + بدل شهري)", specializations: "العلوم الاقتصادية والاجتماعية", language: "الصينية أو الإنجليزية", deadline: "يناير – أبريل", link: "https://www.campuschina.org", flag: "🇨🇳" },
+            { section: "حكومية", country: "روسيا", name: "منحة الحكومة الروسية", funding: "تغطية الدراسة الكاملة + مكافأة شهرية + سكن جامعي", specializations: "الاقتصاد، العلاقات الدولية، العلوم السياسية", language: "الروسية أو الإنجليزية", deadline: "أكتوبر – فبراير", link: "https://education-in-russia.com", flag: "🇷🇺" },
+            { section: "حكومية", country: "نيوزيلندا", name: "منحة الحكومة النيوزيلندية (Manaaki)", funding: "شامل (رسوم + معيشة + سكن)", specializations: "الاقتصاد، التنمية الدولية", language: "الإنجليزية", deadline: "مارس – مايو", link: "https://www.nzscholarships.govt.nz", flag: "🇳🇿" },
+            { section: "حكومية", country: "أستراليا", name: "منحة الحكومة الأسترالية (Australia Awards)", funding: "شامل لجميع النفقات", specializations: "الاقتصاد، التنمية، السياسة العامة", language: "الإنجليزية", deadline: "فبراير – أبريل", link: "https://www.dfat.gov.au/people-to-people/australia-awards", flag: "🇦🇺" },
+            { section: "حكومية", country: "النمسا", name: "منحة الحكومة النمساوية (ADC Scholarships)", funding: "كامل + بدل معيشة + تأمين", specializations: "الاقتصاد والتنمية", language: "الإنجليزية", deadline: "نوفمبر – مارس", link: "https://www.austrian-development.at", flag: "🇦🇹" },
+            { section: "حكومية", country: "قطر", name: "منحة جامعة قطر", funding: "كامل (رسوم + سكن + بدل شهري + تذاكر سنوية)", specializations: "الاقتصاد، العلوم السياسية", language: "الإنجليزية", deadline: "أكتوبر – فبراير", link: "https://www.qu.edu.qa", flag: "🇶🇦" },
+
+            // منح حكومية إضافية مذكورة في النص
+            { section: "حكومية", country: "السعودية", name: "منح الحكومة السعودية", funding: "ممولة بالكامل (رسوم دراسية + بدلات + سكن)", specializations: "مختلف التخصصات (باستثناء الطب والصيدلة أحياناً) بما في ذلك الاقتصاد والعلوم السياسية", language: "غير محدد", deadline: "غير محدد", link: "موقع الجامعة السعودية المتقدم إليها", flag: "🇸🇦" },
+
+            // القسم الثاني: منح جامعات عالمية مرموقة (تمويل على أساس الاحتياج)
+            { section: "جامعية مرموقة", country: "كندا", name: "منحة Lester B. Pearson – جامعة تورونتو", funding: "كامل لمدة 4 سنوات (رسوم + سكن + كتب) - منحة تنافسية", specializations: "تشمل الاقتصاد والعلوم السياسية", language: "الإنجليزية", deadline: "نوفمبر – يناير", link: "https://future.utoronto.ca/pearson", flag: "🇨🇦" },
+            { section: "جامعية مرموقة", country: "كندا", name: "منحة UBC International Leader of Tomorrow", funding: "تغطية كاملة حسب الاحتياج", specializations: "الاقتصاد، السياسة العامة، الإدارة", language: "الإنجليزية", deadline: "ديسمبر – يناير", link: "https://you.ubc.ca", flag: "🇨🇦" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منحة Karsh Scholars – جامعة Duke", funding: "شامل (رسوم + إقامة + تمويل بحثي صيفي) - مزيج من التفوق والاحتياج", specializations: "الاقتصاد، العلاقات الدولية", language: "الإنجليزية", deadline: "غير محدد", link: "https://karshscholars.duke.edu", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منح جامعة هارفارد (Harvard Financial Aid)", funding: "على أساس الاحتياج المالي (قد تصل لتغطية كاملة)", specializations: "الاقتصاد، السياسة، التاريخ", language: "الإنجليزية", deadline: "غير محدد", link: "https://college.harvard.edu/financial-aid", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منح جامعة MIT", funding: "تغطية كاملة بناءً على الحاجة المالية (100% من الاحتياج المبيّن)", specializations: "الاقتصاد، علوم القرار، السياسة", language: "الإنجليزية", deadline: "غير محدد", link: "https://sfs.mit.edu", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منح جامعة Yale", funding: "تمويل كامل على أساس الاحتياج (Need-Blind)", specializations: "الاقتصاد، العلوم السياسية", language: "الإنجليزية", deadline: "غير محدد", link: "https://admissions.yale.edu/financial-aid", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منح جامعة Princeton", funding: "100% من الاحتياج المالي لجميع الطلاب الدوليين", specializations: "الاقتصاد، السياسة العامة، العلاقات الدولية", language: "الإنجليزية", deadline: "غير محدد", link: "https://admission.princeton.edu", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "الولايات المتحدة", name: "منح جامعة Stanford (Knight-Hennessy)", funding: "شامل (رسوم + معيشة + بدل سنوي) - لطلاب الماجستير/الدكتوراه بشكل أساسي لكن المنشأة مذكورة", specializations: "العلوم السياسية، الاقتصاد", language: "الإنجليزية", deadline: "غير محدد", link: "https://knight-hennessy.stanford.edu", flag: "🇺🇸" },
+            { section: "جامعية مرموقة", country: "المملكة المتحدة", name: "منح جامعة أكسفورد (Reach Oxford Scholarship)", funding: "كامل + بدل معيشة + تذاكر سنوية", specializations: "الاقتصاد، العلوم السياسية", language: "الإنجليزية", deadline: "غير محدد", link: "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/scholarships/reach-oxford-scholarship", flag: "🇬🇧" },
+            { section: "جامعية مرموقة", country: "المملكة المتحدة", name: "منح جامعة كامبريدج (Gates Cambridge Scholarship)", funding: "كامل + بدل معيشة + تأمين + سفر - مخصصة للدراسات العليا بشكل أساسي", specializations: "الاقتصاد، السياسة", language: "الإنجليزية", deadline: "غير محدد", link: "https://www.gatescambridge.org", flag: "🇬🇧" },
+        ];
+
+        // تهيئة الفلتر الخاص بالدول
+        function setupCountryFilter() {
+            const countries = [...new Set(scholarshipsData.map(s => s.country))].sort();
+            const filterElement = document.getElementById('countryFilter');
+
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                filterElement.appendChild(option);
+            });
+        }
+
+        // دالة إنشاء بطاقة المنحة
+        function createScholarshipCard(scholarship) {
+            const card = document.createElement('div');
+            card.className = 'scholarship-card bg-white p-6 rounded-xl border-t-4 border-sky-400 flex flex-col justify-between';
+            
+            // تحديد لون أيقونة التمويل
+            const sectionColor = scholarship.section === 'حكومية' ? 'text-blue-600' : 'text-purple-600';
+            const sectionBadge = scholarship.section === 'حكومية' ? 'حكومية دولية' : 'جامعة مرموقة';
+
+            card.innerHTML = `
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="flag-icon">${scholarship.flag}</span>
+                        <span class="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">${sectionBadge}</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">${scholarship.name}</h3>
+                    
+                    <p class="text-gray-600 text-sm mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline ml-1 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span class="font-medium text-gray-700">${scholarship.country}</span>
+                    </p>
+
+                    <!-- تفاصيل التمويل -->
+                    <div class="space-y-2 mt-4 text-sm text-gray-700 border-t pt-3 border-gray-100">
+                        <p class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ${sectionColor} flex-shrink-0 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v4m0 0h-2m2 0h2M9 7h6m0 0v10m0 0H9m-9 3v-2a4 4 0 014-4h4m-8 0v2h4m-4-2h4m-4-2a4 4 0 014-4h4m-8 0a4 4 0 014-4h4m-4 0v-2h4m-4-2a4 4 0 014-4h4m-4 0v-2h4" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9m6 3H9" />
+                            </svg>
+                            <span class="font-semibold ml-1">التمويل:</span>
+                            <span class="flex-grow text-right">${scholarship.funding}</span>
+                        </p>
+                        <p class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 flex-shrink-0 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span class="font-semibold ml-1">مواعيد التقديم:</span>
+                            <span class="flex-grow text-right">${scholarship.deadline}</span>
+                        </p>
+                        <p class="flex items-start">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 flex-shrink-0 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                            </svg>
+                            <span class="font-semibold ml-1">التخصصات:</span>
+                            <span class="flex-grow text-right">${scholarship.specializations}</span>
+                        </p>
+                        <p class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 flex-shrink-0 ml-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 0110 12c0-4.04-1.125-6.852-2.5-8.5M7 18.75c-.748 1.237-2.31 1.734-4.8 1.25" />
+                            </svg>
+                            <span class="font-semibold ml-1">لغة الدراسة:</span>
+                            <span class="flex-grow text-right">${scholarship.language}</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- زر الرابط الرسمي -->
+                <div class="mt-4">
+                    <a href="${scholarship.link}" target="_blank" class="apply-btn w-full block text-center text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-sky-300">
+                        الرابط الرسمي
+                    </a>
+                </div>
+            `;
+            return card;
+        }
+
+        // دالة التحديث الرئيسية للواجهة بناءً على عوامل التصفية
+        function filterScholarships() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const countryFilter = document.getElementById('countryFilter').value;
+            const sectionFilter = document.getElementById('sectionFilter').value;
+            const container = document.getElementById('scholarshipsContainer');
+            const noResults = document.getElementById('noResults');
+
+            // تصفية البيانات
+            const filteredData = scholarshipsData.filter(scholarship => {
+                const searchMatch = searchInput === '' ||
+                    scholarship.name.toLowerCase().includes(searchInput) ||
+                    scholarship.country.toLowerCase().includes(searchInput) ||
+                    scholarship.specializations.toLowerCase().includes(searchInput);
+
+                const countryMatch = countryFilter === '' || scholarship.country === countryFilter;
+                const sectionMatch = sectionFilter === '' || scholarship.section === sectionFilter;
+
+                return searchMatch && countryMatch && sectionMatch;
+            });
+
+            // مسح المحتوى الحالي
+            container.innerHTML = '';
+
+            // عرض المنح المصفاة
+            if (filteredData.length > 0) {
+                filteredData.forEach(scholarship => {
+                    container.appendChild(createScholarshipCard(scholarship));
+                });
+                noResults.classList.add('hidden');
+            } else {
+                noResults.classList.remove('hidden');
+            }
+        }
+
+        // تشغيل الوظائف عند تحميل الصفحة
+        window.onload = function() {
+            setupCountryFilter();
+            filterScholarships(); // عرض جميع المنح في البداية
+        };
+    </script>
 </body>
 </html>
